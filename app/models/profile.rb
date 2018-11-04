@@ -1,7 +1,9 @@
 class Profile
   include ActiveModel::Model
-  include ActiveModelAttributes
+  include ActiveModel::Attributes
 
-  attribute :user_name, :string
-  attribute :tweet, :string
+  attribute :user, :string, default: -> { raise 'This attribute must not be nil.' }
+  attribute :tweet
+
+  validates :user, presence: true
 end

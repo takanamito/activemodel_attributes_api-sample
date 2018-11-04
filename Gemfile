@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 5.2.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 # Use Puma as the app server
@@ -26,7 +26,6 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 gem 'active_model_serializers'
-gem 'active_model_attributes_backport'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
