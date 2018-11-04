@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: Link Example
+  version: 1.0.0
+paths:
+  /profile/{username}:
+    get:
+      parameters:
+      - name: username
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The User Profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/profile'
+components:
+  schemas:
+    profile:
+      type: object
+      properties:
+        user_name:
+          type: string
+        tweet:
+          type: string
